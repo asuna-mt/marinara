@@ -271,7 +271,7 @@ minetest.register_node("marinara:sand_with_seagrass", {
 })
 
 minetest.register_node("marinara:sand_with_alage", {
-	description = S("Alage"),
+	description = S("Algae"),
 	drawtype = "plantlike_rooted",
 	waving = 1,
 	tiles = {"default_sand.png"},
@@ -343,7 +343,7 @@ minetest.register_node("marinara:sand_with_alage", {
 })
 
 minetest.register_node("marinara:coastrock_with_brownalage", {
-	description = S("Brown Alage"),
+	description = S("Brown Algae"),
 	drawtype = "plantlike_rooted",
 	waving = 1,
 	tiles = {"marinara_coastrock.png"},

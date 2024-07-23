@@ -12,7 +12,7 @@ minetest.register_node("marinara:softcoral_yellow", {
 special_tiles = {{name = "marinara_softcoral_yellow.png", tileable_vertical = true, waving = 1, animation = {type="vertical_frames", length = 2}}},
 	inventory_image = "marinara_softcoral_yellow_inv.png",
 	wield_image = "marinara_softcoral_yellow_inv.png",
-	groups = {snappy = 3},
+	groups = {snappy = 3, coral = 1},
 	selection_box = {
 		type = "fixed",
 		fixed = {
@@ -43,7 +43,7 @@ minetest.register_node("marinara:softcoral_white", {
 special_tiles = {{name = "marinara_softcoral_white.png", tileable_vertical = true, waving = 1, animation = {type="vertical_frames", length = 2}}},
 	inventory_image = "marinara_softcoral_white_inv.png",
 	wield_image = "marinara_softcoral_white_inv.png",
-	groups = {snappy = 3},
+	groups = {snappy = 3, coral = 1},
 	selection_box = {
 		type = "fixed",
 		fixed = {
@@ -74,7 +74,7 @@ minetest.register_node("marinara:softcoral_red", {
 special_tiles = {{name = "marinara_softcoral_red.png", tileable_vertical = true, waving = 1}},
 	inventory_image = "marinara_softcoral_red.png",
 	wield_image = "marinara_softcoral_red.png",
-	groups = {snappy = 3},
+	groups = {snappy = 3, coral = 1},
 	selection_box = {
 		type = "fixed",
 		fixed = {
@@ -105,7 +105,7 @@ minetest.register_node("marinara:softcoral_green", {
 special_tiles = {{name = "marinara_softcoral_green.png", tileable_vertical = true, waving = 1}},
 	inventory_image = "marinara_softcoral_green.png",
 	wield_image = "marinara_softcoral_green.png",
-	groups = {snappy = 3},
+	groups = {snappy = 3, coral = 1},
 	selection_box = {
 		type = "fixed",
 		fixed = {
@@ -136,7 +136,7 @@ minetest.register_node("marinara:softcoral", {
 special_tiles = {{name = "marinara_softcoral.png", tileable_vertical = true, waving = 1}},
 	inventory_image = "marinara_softcoral.png",
 	wield_image = "marinara_softcoral_green.png",
-	groups = {snappy = 3},
+	groups = {snappy = 3, coral = 1},
 	selection_box = {
 		type = "fixed",
 		fixed = {
@@ -167,7 +167,7 @@ minetest.register_node("marinara:softcoral_brown", {
 special_tiles = {{name = "marinara_softcoral_brown.png", tileable_vertical = true, waving = 1, animation = {type="vertical_frames", length = 2}}},
 	inventory_image = "marinara_softcoral_brown_inv.png",
 	wield_image = "marinara_softcoral_brown_inv.png",
-	groups = {snappy = 3},
+	groups = {snappy = 3, coral = 1},
 	selection_box = {
 		type = "fixed",
 		fixed = {

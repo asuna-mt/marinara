@@ -1,8 +1,20 @@
+local mpath = minetest.get_modpath("marinara")
+local oceans_and_shore = {}
+for _,biome in ipairs(asuna.biome_groups.below) do
+	table.insert(oceans_and_shore,biome)
+end
+for _,biome in ipairs(asuna.biome_groups.shore) do
+	table.insert(oceans_and_shore,biome)
+end
+
 --- seashells
 
 	minetest.register_decoration({
 		deco_type = "simple",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
 		noise_params = {
 			offset = -0,
@@ -14,7 +26,7 @@
 		},
     place_offset_y=-1,
     flags = "place_center_x,place_center_z,force_placement",
-		biomes = {"savanna_shore", "savanna_ocean", "coniferous_forest_ocean", "sandstone_desert_ocean", "grassland_ocean",},
+		biomes = oceans_and_shore,
 		y_max = 2,
 		y_min = 0,
 		decoration = "marinara:sand_with_seashells"
@@ -22,7 +34,10 @@
 
 	minetest.register_decoration({
 		deco_type = "simple",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
 		noise_params = {
 			offset = -0,
@@ -34,7 +49,7 @@
 		},
     place_offset_y=-1,
     flags = "place_center_x,place_center_z,force_placement",
-		biomes = {"savanna_shore", "savanna_ocean", "coniferous_forest_ocean", "sandstone_desert_ocean", "grassland_ocean",},
+		biomes = oceans_and_shore,
 		y_max = 2,
 		y_min = 0,
 		decoration = "marinara:sand_with_seashells_broken"
@@ -42,7 +57,10 @@
 
 	minetest.register_decoration({
 		deco_type = "simple",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
 		noise_params = {
 			offset = -0,
@@ -54,7 +72,7 @@
 		},
     place_offset_y=-1,
     flags = "place_center_x,place_center_z,force_placement",
-		biomes = {"savanna_shore", "savanna_ocean", "coniferous_forest_ocean", "sandstone_desert_ocean", "grassland_ocean",},
+		biomes = oceans_and_shore,
 		y_max = 2,
 		y_min = 0,
 		decoration = "marinara:sand_with_seashells_white"
@@ -62,7 +80,10 @@
 
 	minetest.register_decoration({
 		deco_type = "simple",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
 		noise_params = {
 			offset = -0,
@@ -74,7 +95,7 @@
 		},
     place_offset_y=-1,
     flags = "place_center_x,place_center_z,force_placement",
-		biomes = {"savanna_shore", "savanna_ocean", "coniferous_forest_ocean", "sandstone_desert_ocean", "grassland_ocean",},
+		biomes = oceans_and_shore,
 		y_max = 2,
 		y_min = 0,
 		decoration = "marinara:sand_with_seashells_yellow"
@@ -82,7 +103,10 @@
 
 	minetest.register_decoration({
 		deco_type = "simple",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
 		noise_params = {
 			offset = -0,
@@ -94,7 +118,7 @@
 		},
     place_offset_y=-1,
     flags = "place_center_x,place_center_z,force_placement",
-		biomes = {"savanna_shore", "savanna_ocean", "coniferous_forest_ocean", "sandstone_desert_ocean", "grassland_ocean",},
+		biomes = oceans_and_shore,
 		y_max = 2,
 		y_min = 0,
 		decoration = "marinara:sand_with_seashells_brown"
@@ -102,7 +126,10 @@
 
 	minetest.register_decoration({
 		deco_type = "simple",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
 		noise_params = {
 			offset = -0,
@@ -114,7 +141,7 @@
 		},
     place_offset_y=-1,
     flags = "place_center_x,place_center_z,force_placement",
-		biomes = {"savanna_shore", "savanna_ocean", "coniferous_forest_ocean", "sandstone_desert_ocean", "grassland_ocean",},
+		biomes = oceans_and_shore,
 		y_max = 2,
 		y_min = 0,
 		decoration = "marinara:sand_with_seashells_pink"
@@ -122,7 +149,10 @@
 
 	minetest.register_decoration({
 		deco_type = "simple",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
 		noise_params = {
 			offset = -0,
@@ -134,7 +164,7 @@
 		},
     place_offset_y=-1,
     flags = "place_center_x,place_center_z,force_placement",
-		biomes = {"savanna_shore", "savanna_ocean", "coniferous_forest_ocean", "sandstone_desert_ocean", "grassland_ocean",},
+		biomes = oceans_and_shore,
 		y_max = 2,
 		y_min = 0,
 		decoration = "marinara:sand_with_seashells_orange"
@@ -145,13 +175,16 @@
 
 minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
     fill_ratio = 0.00001,
-    biomes = {"cold_desert_ocean", "coniferous_forest_ocean", "deciduous_forest_ocean", "grassland_ocean", "sandstone_desert_ocean", "savanna_ocean", "rainforest_ocean", "tundra_ocean", "icesheet_ocean", "snowy_grassland_ocean",},
+    biomes = asuna.biome_groups.all,
     flags = "place_center_x,place_center_z,force_placement",
     y_max = -10,
-    y_min = -20,
+    y_min = -30,
     place_offset_y=-1,
     schematic = minetest.get_modpath("marinara").."/schematics/marinara_wreck.mts",
 	rotation = "random",
@@ -159,13 +192,16 @@ minetest.register_decoration({
 
 minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
     fill_ratio = 0.00001,
-    biomes = {"cold_desert_ocean", "coniferous_forest_ocean", "deciduous_forest_ocean", "grassland_ocean", "sandstone_desert_ocean", "savanna_ocean", "rainforest_ocean", "tundra_ocean", "icesheet_ocean", "snowy_grassland_ocean",},
+    biomes = asuna.biome_groups.all,
     flags = "place_center_x,place_center_z,force_placement",
     y_max = -10,
-    y_min = -20,
+    y_min = -30,
     place_offset_y=-1,
     schematic = minetest.get_modpath("marinara").."/schematics/marinara_wreck2.mts",
 	rotation = "random",
@@ -173,13 +209,16 @@ minetest.register_decoration({
 
 minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
     fill_ratio = 0.00001,
-    biomes = {"cold_desert_ocean", "coniferous_forest_ocean", "deciduous_forest_ocean", "grassland_ocean", "sandstone_desert_ocean", "savanna_ocean", "rainforest_ocean", "tundra_ocean", "icesheet_ocean", "snowy_grassland_ocean",},
+    biomes = asuna.biome_groups.all,
     flags = "place_center_x,place_center_z,force_placement",
     y_max = -10,
-    y_min = -20,
+    y_min = -30,
     place_offset_y=-1,
     schematic = minetest.get_modpath("marinara").."/schematics/marinara_wreck3.mts",
 	rotation = "random",
@@ -187,13 +226,16 @@ minetest.register_decoration({
 
 minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
     fill_ratio = 0.00001,
-    biomes = {"cold_desert_ocean", "coniferous_forest_ocean", "deciduous_forest_ocean", "grassland_ocean", "sandstone_desert_ocean", "savanna_ocean", "rainforest_ocean", "tundra_ocean", "icesheet_ocean", "snowy_grassland_ocean",},
+    biomes = asuna.biome_groups.all,
     flags = "place_center_x,place_center_z,force_placement",
     y_max = -10,
-    y_min = -20,
+    y_min = -30,
     place_offset_y=-1,
     schematic = minetest.get_modpath("marinara").."/schematics/marinara_wreckbounty.mts",
 	rotation = "random",
@@ -201,13 +243,16 @@ minetest.register_decoration({
 
 minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
     fill_ratio = 0.00001,
-    biomes = {"cold_desert_ocean", "coniferous_forest_ocean", "deciduous_forest_ocean", "grassland_ocean", "sandstone_desert_ocean", "savanna_ocean", "rainforest_ocean", "tundra_ocean", "icesheet_ocean", "snowy_grassland_ocean",},
+    biomes = asuna.biome_groups.all,
     flags = "place_center_x,place_center_z,force_placement",
     y_max = -10,
-    y_min = -20,
+    y_min = -30,
     place_offset_y=-1,
     schematic = minetest.get_modpath("marinara").."/schematics/marinara_wreckbounty2.mts",
 	rotation = "random",
@@ -215,13 +260,16 @@ minetest.register_decoration({
 
 minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
     fill_ratio = 0.00001,
-    biomes = {"cold_desert_ocean", "coniferous_forest_ocean", "deciduous_forest_ocean", "grassland_ocean", "sandstone_desert_ocean", "savanna_ocean", "rainforest_ocean", "tundra_ocean", "icesheet_ocean", "snowy_grassland_ocean",},
+    biomes = asuna.biome_groups.all,
     flags = "place_center_x,place_center_z,force_placement",
     y_max = -10,
-    y_min = -20,
+    y_min = -30,
     place_offset_y=-1,
     schematic = minetest.get_modpath("marinara").."/schematics/marinara_wreckbounty3.mts",
 	rotation = "random",
@@ -231,10 +279,13 @@ minetest.register_decoration({
 
 minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
     fill_ratio = 0.0009,
-    biomes = {"cold_desert_ocean", "tundra_ocean", "icesheet_ocean", "snowy_grassland_ocean",},
+    biomes = asuna.biome_groups.ocean_cold,
     flags = "place_center_x,place_center_z,force_placement",
     y_max = -1,
     y_min = -4,
@@ -245,10 +296,13 @@ minetest.register_decoration({
 
 minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
     fill_ratio = 0.0009,
-    biomes = {"cold_desert_ocean", "tundra_ocean", "icesheet_ocean", "snowy_grassland_ocean",},
+    biomes = asuna.biome_groups.ocean_cold,
     flags = "place_center_x,place_center_z,force_placement",
     y_max = -1,
     y_min = -4,
@@ -259,10 +313,13 @@ minetest.register_decoration({
 
 minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
     fill_ratio = 0.0009,
-    biomes = {"cold_desert_ocean", "tundra_ocean", "icesheet_ocean", "snowy_grassland_ocean",},
+    biomes = asuna.biome_groups.ocean_cold,
     flags = "place_center_x,place_center_z,force_placement",
     y_max = -1,
     y_min = -4,
@@ -273,10 +330,13 @@ minetest.register_decoration({
 
 minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
     fill_ratio = 0.0009,
-    biomes = {"cold_desert_ocean", "tundra_ocean", "icesheet_ocean", "snowy_grassland_ocean",},
+    biomes = asuna.biome_groups.ocean_cold,
     flags = "place_center_x,place_center_z,force_placement",
     y_max = -1,
     y_min = -4,
@@ -287,10 +347,13 @@ minetest.register_decoration({
 
 minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
     fill_ratio = 0.0009,
-    biomes = {"cold_desert_ocean", "tundra_ocean", "icesheet_ocean", "snowy_grassland_ocean",},
+    biomes = asuna.biome_groups.ocean_cold,
     flags = "place_center_x,place_center_z,force_placement",
     y_max = -1,
     y_min = -4,
@@ -301,10 +364,13 @@ minetest.register_decoration({
 
 minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
     fill_ratio = 0.0009,
-    biomes = {"cold_desert_ocean", "tundra_ocean", "icesheet_ocean", "snowy_grassland_ocean",},
+    biomes = asuna.biome_groups.ocean_cold,
     flags = "place_center_x,place_center_z,force_placement",
     y_max = -1,
     y_min = -4,
@@ -315,10 +381,13 @@ minetest.register_decoration({
 
 minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
     fill_ratio = 0.0009,
-    biomes = {"cold_desert_ocean", "tundra_ocean", "icesheet_ocean", "snowy_grassland_ocean",},
+    biomes = asuna.biome_groups.ocean_cold,
     flags = "place_center_x,place_center_z,force_placement",
     y_max = -3,
     y_min = -5,
@@ -329,10 +398,13 @@ minetest.register_decoration({
 
 minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
-    fill_ratio = 0.0007,
-    biomes = {"cold_desert_ocean", "tundra_ocean", "icesheet_ocean", "snowy_grassland_ocean", "coniferous_forest_ocean", "grassland_ocean"},
+    fill_ratio = 0.0002,
+    biomes = asuna.biome_groups.all,
     flags = "place_center_x,place_center_z,force_placement",
     y_max = -2,
     y_min = -3,
@@ -343,10 +415,13 @@ minetest.register_decoration({
 
 minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
-    fill_ratio = 0.0007,
-    biomes = {"cold_desert_ocean", "tundra_ocean", "icesheet_ocean", "snowy_grassland_ocean", "coniferous_forest_ocean", "grassland_ocean"},
+    fill_ratio = 0.0002,
+    biomes = asuna.biome_groups.all,
     flags = "place_center_x,place_center_z,force_placement",
     y_max = -2,
     y_min = -3,
@@ -357,10 +432,13 @@ minetest.register_decoration({
 
 minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
     fill_ratio = 0.0007,
-    biomes = {"cold_desert_ocean", "tundra_ocean", "icesheet_ocean", "snowy_grassland_ocean", "coniferous_forest_ocean", "grassland_ocean"},
+    biomes = asuna.biome_groups.all,
     flags = "place_center_x,place_center_z,force_placement",
     y_max = -2,
     y_min = -3,
@@ -371,10 +449,13 @@ minetest.register_decoration({
 
 minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
     fill_ratio = 0.0007,
-    biomes = {"cold_desert_ocean", "coniferous_forest_ocean", "grassland_ocean"},
+    biomes = asuna.biome_groups.all,
     flags = "place_center_x,place_center_z,force_placement",
     y_max = -2,
     y_min = -3,
@@ -385,10 +466,13 @@ minetest.register_decoration({
 
 minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
     fill_ratio = 0.0007,
-    biomes = {"cold_desert_ocean", "coniferous_forest_ocean", "grassland_ocean"},
+    biomes = asuna.biome_groups.all,
     flags = "place_center_x,place_center_z,force_placement",
     y_max = -2,
     y_min = -3,
@@ -399,10 +483,13 @@ minetest.register_decoration({
 
 minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
     fill_ratio = 0.0007,
-    biomes = {"cold_desert_ocean", "coniferous_forest_ocean", "grassland_ocean"},
+    biomes = asuna.biome_groups.all,
     flags = "place_center_x,place_center_z,force_placement",
     y_max = -2,
     y_min = -3,
@@ -413,10 +500,13 @@ minetest.register_decoration({
 
 minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
     fill_ratio = 0.0007,
-    biomes = {"snowy_grassland_ocean", "coniferous_forest_ocean", "grassland_ocean"},
+    biomes = asuna.biome_groups.ocean_cold,
     flags = "place_center_x,place_center_z,force_placement",
     y_max = -5,
     y_min = -10,
@@ -427,10 +517,13 @@ minetest.register_decoration({
 
 minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
     fill_ratio = 0.0007,
-    biomes = {"snowy_grassland_ocean", "coniferous_forest_ocean", "grassland_ocean"},
+    biomes = asuna.biome_groups.ocean_cold,
     flags = "place_center_x,place_center_z,force_placement",
     y_max = -5,
     y_min = -10,
@@ -441,10 +534,13 @@ minetest.register_decoration({
 
 minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
     fill_ratio = 0.0007,
-    biomes = {"snowy_grassland_ocean", "coniferous_forest_ocean", "grassland_ocean"},
+    biomes = asuna.biome_groups.ocean_cold,
     flags = "place_center_x,place_center_z,force_placement",
     y_max = -5,
     y_min = -10,
@@ -455,10 +551,13 @@ minetest.register_decoration({
 
 minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
     fill_ratio = 0.0007,
-    biomes = {"snowy_grassland_ocean", "coniferous_forest_ocean", "grassland_ocean"},
+    biomes = asuna.biome_groups.ocean_cold,
     flags = "place_center_x,place_center_z,force_placement",
     y_max = -5,
     y_min = -10,
@@ -469,10 +568,13 @@ minetest.register_decoration({
 
 minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
     fill_ratio = 0.0007,
-    biomes = {"snowy_grassland_ocean", "coniferous_forest_ocean", "grassland_ocean"},
+    biomes = asuna.biome_groups.ocean_cold,
     flags = "place_center_x,place_center_z,force_placement",
     y_max = -5,
     y_min = -10,
@@ -483,10 +585,13 @@ minetest.register_decoration({
 
 minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
     fill_ratio = 0.0007,
-    biomes = {"snowy_grassland_ocean", "coniferous_forest_ocean", "grassland_ocean"},
+    biomes = asuna.biome_groups.ocean_cold,
     flags = "place_center_x,place_center_z,force_placement",
     y_max = -5,
     y_min = -10,
@@ -497,7 +602,10 @@ minetest.register_decoration({
 
 minetest.register_decoration({
 		deco_type = "simple",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		place_offset_y = -1,
 		sidelen = 16,
 		noise_params = {
@@ -508,14 +616,7 @@ minetest.register_decoration({
 			octaves = 5,
 			persist = 0.9
 		},
-		biomes = {
-			"taiga_ocean",
-			"snowy_grassland_ocean",
-			"grassland_ocean",
-			"coniferous_forest_ocean",
-			"deciduous_forest_ocean",
-			"sandstone_desert_ocean",
-			"cold_desert_ocean"},
+		biomes = asuna.biome_groups.all,
 		y_max = -11,
 		y_min = -16,
 		flags = "force_placement",
@@ -528,18 +629,18 @@ minetest.register_decoration({
 		deco_type = "schematic",
 		place_on = {"default:sand", "naturalbiomes:palmbeach_sand"},
 		sidelen = 16,
-noise_params = {
+		noise_params = {
 			offset = -0.04,
-			scale = 0.2,
+			scale = 0.25,
 			spread = {x = 100, y = 100, z = 100},
 			seed = 87112,
-			octaves = 7,
-			persist = 0.9
+			octaves = 4,
+			persist = 0.5
 		},
-    biomes = {"coniferous_forest_ocean", "deciduous_forest_ocean", "grassland_ocean", "sandstone_desert_ocean", "savanna_ocean", "rainforest_ocean", "tundra_ocean", "snowy_grassland_ocean", "naturalbiomes:palmbeach",},
+    biomes = asuna.biome_groups.all,
     flags = "place_center_x,place_center_z,force_placement",
     y_max = -3,
-    y_min = -8,
+    y_min = -36,
     place_offset_y=0,
     schematic = minetest.get_modpath("marinara").."/schematics/marinara_seagrass.mts",
 	rotation = "random",
@@ -549,18 +650,18 @@ minetest.register_decoration({
 		deco_type = "schematic",
 		place_on = {"default:sand", "naturalbiomes:palmbeach_sand"},
 		sidelen = 16,
-noise_params = {
+		noise_params = {
 			offset = -0.04,
-			scale = 0.2,
+			scale = 0.25,
 			spread = {x = 100, y = 100, z = 100},
-			seed = 87112,
-			octaves = 7,
-			persist = 0.9
+			seed = 87113,
+			octaves = 4,
+			persist = 0.5
 		},
-    biomes = {"coniferous_forest_ocean", "deciduous_forest_ocean", "grassland_ocean", "sandstone_desert_ocean", "savanna_ocean", "rainforest_ocean", "tundra_ocean", "snowy_grassland_ocean", "naturalbiomes:palmbeach",},
+    biomes = asuna.biome_groups.all,
     flags = "place_center_x,place_center_z,force_placement",
     y_max = -4,
-    y_min = -8,
+    y_min = -36,
     place_offset_y=0,
     schematic = minetest.get_modpath("marinara").."/schematics/marinara_seagrass_long.mts",
 	rotation = "random",
@@ -570,15 +671,15 @@ minetest.register_decoration({
 		deco_type = "schematic",
 		place_on = {"default:sand", "naturalbiomes:palmbeach_sand"},
 		sidelen = 16,
-noise_params = {
+		noise_params = {
 			offset = -0.04,
-			scale = 0.2,
+			scale = 0.25,
 			spread = {x = 100, y = 100, z = 100},
-			seed = 87112,
-			octaves = 7,
-			persist = 0.9
+			seed = 87114,
+			octaves = 4,
+			persist = 0.5
 		},
-    biomes = {"deciduous_forest_ocean", "grassland_ocean", "coniferous_forest_ocean", "naturalbiomes:palmbeach",},
+    biomes = oceans_and_shore,
     flags = "place_center_x,place_center_z,force_placement",
     y_max = -0,
     y_min = -3,
@@ -589,17 +690,20 @@ noise_params = {
 
 minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:sand"},
-		sidelen = 16,
-noise_params = {
-			offset = -0.04,
-			scale = 0.2,
-			spread = {x = 100, y = 100, z = 100},
-			seed = 87112,
-			octaves = 7,
-			persist = 0.9
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
 		},
-    biomes = {"cold_desert_ocean", "coniferous_forest_ocean", "grassland_ocean", "tundra_ocean", "icesheet_ocean", "snowy_grassland_ocean",},
+		sidelen = 16,
+		noise_params = {
+			offset = -0.04,
+			scale = 0.25,
+			spread = {x = 100, y = 100, z = 100},
+			seed = 87115,
+			octaves = 4,
+			persist = 0.5
+		},
+    biomes = asuna.biome_groups.all,
     flags = "place_center_x,place_center_z,force_placement",
     y_max = -1,
     y_min = -5,
@@ -608,57 +712,17 @@ noise_params = {
 	rotation = "random",
 })
 
-minetest.register_decoration({
-		deco_type = "schematic",
-		place_on = {"default:dirt_with_grass"},
-		sidelen = 16,
-noise_params = {
-			offset = -0.04,
-			scale = 0.2,
-			spread = {x = 100, y = 100, z = 100},
-			seed = 87112,
-			octaves = 7,
-			persist = 0.9
-		},
-    biomes = {"deciduous_forest_ocean", "deciduous_forest_shore"},
-    spawn_by = "default:water_source",
-    flags = "place_center_x,place_center_z,force_placement",
-    y_max = 1,
-    y_min = 0,
-    place_offset_y=0,
-    schematic = minetest.get_modpath("marinara").."/schematics/marinara_reed.mts",
-	rotation = "random",
-})
-
-minetest.register_decoration({
-		deco_type = "schematic",
-		place_on = {"default:dirt"},
-		sidelen = 16,
-noise_params = {
-			offset = -0.04,
-			scale = 0.2,
-			spread = {x = 100, y = 100, z = 100},
-			seed = 87112,
-			octaves = 7,
-			persist = 0.9
-		},
-    biomes = {"deciduous_forest_ocean", "deciduous_forest_shore"},
-    flags = "place_center_x,place_center_z,force_placement",
-    y_max = -0,
-    y_min = -0,
-    place_offset_y=0,
-    schematic = minetest.get_modpath("marinara").."/schematics/marinara_reed2.mts",
-	rotation = "random",
-})
-
 --- tropical oceans
 
 minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
     fill_ratio = 0.0003,
-    biomes = {"sandstone_desert_ocean", "savanna_ocean", "rainforest_ocean"},
+    biomes = asuna.biome_groups.ocean_tropical,
     flags = "place_center_x,place_center_z,force_placement",
     y_max = -6,
     y_min = -12,
@@ -669,10 +733,13 @@ minetest.register_decoration({
 
 minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
     fill_ratio = 0.0003,
-    biomes = {"sandstone_desert_ocean", "savanna_ocean", "rainforest_ocean"},
+    biomes = asuna.biome_groups.ocean_tropical,
     flags = "place_center_x,place_center_z,force_placement",
     y_max = -6,
     y_min = -12,
@@ -683,10 +750,13 @@ minetest.register_decoration({
 
 minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
     fill_ratio = 0.0003,
-    biomes = {"sandstone_desert_ocean", "savanna_ocean", "rainforest_ocean"},
+    biomes = asuna.biome_groups.ocean_tropical,
     flags = "place_center_x,place_center_z,force_placement",
     y_max = -6,
     y_min = -12,
@@ -697,10 +767,13 @@ minetest.register_decoration({
 
 minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
     fill_ratio = 0.0003,
-    biomes = {"sandstone_desert_ocean", "savanna_ocean", "rainforest_ocean"},
+    biomes = asuna.biome_groups.ocean_tropical,
     flags = "place_center_x,place_center_z,force_placement",
     y_max = -6,
     y_min = -12,
@@ -711,10 +784,13 @@ minetest.register_decoration({
 
 minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
     fill_ratio = 0.0003,
-    biomes = {"sandstone_desert_ocean", "savanna_ocean", "rainforest_ocean"},
+    biomes = asuna.biome_groups.ocean_tropical,
     flags = "place_center_x,place_center_z,force_placement",
     y_max = -6,
     y_min = -12,
@@ -725,10 +801,13 @@ minetest.register_decoration({
 
 minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
     fill_ratio = 0.0003,
-    biomes = {"sandstone_desert_ocean", "savanna_ocean", "rainforest_ocean"},
+    biomes = asuna.biome_groups.ocean_tropical,
     flags = "place_center_x,place_center_z,force_placement",
     y_max = -6,
     y_min = -12,
@@ -739,10 +818,13 @@ minetest.register_decoration({
 
 minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
     fill_ratio = 0.0003,
-    biomes = {"sandstone_desert_ocean", "savanna_ocean", "rainforest_ocean"},
+    biomes = asuna.biome_groups.ocean_tropical,
     flags = "place_center_x,place_center_z,force_placement",
     y_max = -6,
     y_min = -12,
@@ -753,10 +835,13 @@ minetest.register_decoration({
 
 minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
     fill_ratio = 0.0003,
-    biomes = {"sandstone_desert_ocean", "savanna_ocean", "rainforest_ocean"},
+    biomes = asuna.biome_groups.ocean_tropical,
     flags = "place_center_x,place_center_z,force_placement",
     y_max = -6,
     y_min = -12,
@@ -767,10 +852,13 @@ minetest.register_decoration({
 
 minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
     fill_ratio = 0.0003,
-    biomes = {"sandstone_desert_ocean", "savanna_ocean", "rainforest_ocean"},
+    biomes = asuna.biome_groups.ocean_tropical,
     flags = "place_center_x,place_center_z,force_placement",
     y_max = -6,
     y_min = -12,
@@ -781,10 +869,13 @@ minetest.register_decoration({
 
 minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
     fill_ratio = 0.0003,
-    biomes = {"sandstone_desert_ocean", "savanna_ocean", "rainforest_ocean"},
+    biomes = asuna.biome_groups.ocean_tropical,
     flags = "place_center_x,place_center_z,force_placement",
     y_max = -6,
     y_min = -12,
@@ -795,10 +886,13 @@ minetest.register_decoration({
 
 minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
     fill_ratio = 0.0003,
-    biomes = {"sandstone_desert_ocean", "savanna_ocean", "rainforest_ocean"},
+    biomes = asuna.biome_groups.ocean_tropical,
     flags = "place_center_x,place_center_z,force_placement",
     y_max = -6,
     y_min = -12,
@@ -809,10 +903,13 @@ minetest.register_decoration({
 
 minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
     fill_ratio = 0.0003,
-    biomes = {"sandstone_desert_ocean", "savanna_ocean", "rainforest_ocean"},
+    biomes = asuna.biome_groups.ocean_tropical,
     flags = "place_center_x,place_center_z,force_placement",
     y_max = -6,
     y_min = -12,
@@ -823,10 +920,13 @@ minetest.register_decoration({
 
 minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
     fill_ratio = 0.0003,
-    biomes = {"sandstone_desert_ocean", "savanna_ocean", "rainforest_ocean"},
+    biomes = asuna.biome_groups.ocean_tropical,
     flags = "place_center_x,place_center_z,force_placement",
     y_max = -6,
     y_min = -12,
@@ -837,10 +937,13 @@ minetest.register_decoration({
 
 minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
     fill_ratio = 0.0003,
-    biomes = {"sandstone_desert_ocean", "savanna_ocean", "rainforest_ocean"},
+    biomes = asuna.biome_groups.ocean_tropical,
     flags = "place_center_x,place_center_z,force_placement",
     y_max = -6,
     y_min = -12,
@@ -851,10 +954,13 @@ minetest.register_decoration({
 
 minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
     fill_ratio = 0.0003,
-    biomes = {"sandstone_desert_ocean", "savanna_ocean", "rainforest_ocean"},
+    biomes = asuna.biome_groups.ocean_tropical,
     flags = "place_center_x,place_center_z,force_placement",
     y_max = -6,
     y_min = -12,
@@ -865,10 +971,13 @@ minetest.register_decoration({
 
 minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
     fill_ratio = 0.0003,
-    biomes = {"sandstone_desert_ocean", "savanna_ocean", "rainforest_ocean"},
+    biomes = asuna.biome_groups.ocean_tropical,
     flags = "place_center_x,place_center_z,force_placement",
     y_max = -6,
     y_min = -12,
@@ -879,10 +988,13 @@ minetest.register_decoration({
 
 minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
     fill_ratio = 0.0003,
-    biomes = {"sandstone_desert_ocean", "savanna_ocean", "rainforest_ocean"},
+    biomes = asuna.biome_groups.ocean_tropical,
     flags = "place_center_x,place_center_z,force_placement",
     y_max = -6,
     y_min = -12,
@@ -893,10 +1005,13 @@ minetest.register_decoration({
 
 minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
     fill_ratio = 0.0003,
-    biomes = {"sandstone_desert_ocean", "savanna_ocean", "rainforest_ocean"},
+    biomes = asuna.biome_groups.ocean_tropical,
     flags = "place_center_x,place_center_z,force_placement",
     y_max = -6,
     y_min = -12,
@@ -907,10 +1022,13 @@ minetest.register_decoration({
 
 minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
     fill_ratio = 0.0003,
-    biomes = {"sandstone_desert_ocean", "savanna_ocean", "rainforest_ocean"},
+    biomes = asuna.biome_groups.ocean_tropical,
     flags = "place_center_x,place_center_z,force_placement",
     y_max = -6,
     y_min = -12,
@@ -921,10 +1039,13 @@ minetest.register_decoration({
 
 minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
     fill_ratio = 0.0003,
-    biomes = {"sandstone_desert_ocean", "savanna_ocean", "rainforest_ocean"},
+    biomes = asuna.biome_groups.ocean_tropical,
     flags = "place_center_x,place_center_z,force_placement",
     y_max = -6,
     y_min = -12,
@@ -935,10 +1056,13 @@ minetest.register_decoration({
 
 minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:sand"},
+		place_on = {
+			"default:sand",
+			"everness:mineral_sand",
+		},
 		sidelen = 16,
     fill_ratio = 0.0003,
-    biomes = {"sandstone_desert_ocean", "savanna_ocean", "rainforest_ocean"},
+    biomes = asuna.biome_groups.ocean_tropical,
     flags = "place_center_x,place_center_z,force_placement",
     y_max = -6,
     y_min = -12,
