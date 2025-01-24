@@ -13,163 +13,31 @@ end
 		deco_type = "simple",
 		place_on = {
 			"default:sand",
-			"everness:mineral_sand",
 		},
 		sidelen = 16,
 		noise_params = {
-			offset = -0,
-			scale = 0.01,
-			spread = {x = 100, y = 100, z = 100},
+			offset = 0.005,
+			scale = 0.0075,
+			spread = {x = 80, y = 10, z = 80},
 			seed = 3789,
-			octaves = 4,
-			persist = 0.8,
+			octaves = 1,
+			persist = 1.0,
 		},
     place_offset_y=-1,
     flags = "place_center_x,place_center_z,force_placement",
 		biomes = oceans_and_shore,
 		y_max = 2,
 		y_min = 0,
-		decoration = "marinara:sand_with_seashells"
+		decoration = {
+			"marinara:sand_with_seashells",
+			"marinara:sand_with_seashells_broken",
+			"marinara:sand_with_seashells_white",
+			"marinara:sand_with_seashells_yellow",
+			"marinara:sand_with_seashells_brown",
+			"marinara:sand_with_seashells_pink",
+			"marinara:sand_with_seashells_orange",
+		},
 	})
-
-	minetest.register_decoration({
-		deco_type = "simple",
-		place_on = {
-			"default:sand",
-			"everness:mineral_sand",
-		},
-		sidelen = 16,
-		noise_params = {
-			offset = -0,
-			scale = 0.01,
-			spread = {x = 100, y = 100, z = 100},
-			seed = 3789,
-			octaves = 4,
-			persist = 0.8,
-		},
-    place_offset_y=-1,
-    flags = "place_center_x,place_center_z,force_placement",
-		biomes = oceans_and_shore,
-		y_max = 2,
-		y_min = 0,
-		decoration = "marinara:sand_with_seashells_broken"
-	})
-
-	minetest.register_decoration({
-		deco_type = "simple",
-		place_on = {
-			"default:sand",
-			"everness:mineral_sand",
-		},
-		sidelen = 16,
-		noise_params = {
-			offset = -0,
-			scale = 0.01,
-			spread = {x = 100, y = 100, z = 100},
-			seed = 3789,
-			octaves = 4,
-			persist = 0.8,
-		},
-    place_offset_y=-1,
-    flags = "place_center_x,place_center_z,force_placement",
-		biomes = oceans_and_shore,
-		y_max = 2,
-		y_min = 0,
-		decoration = "marinara:sand_with_seashells_white"
-	})
-
-	minetest.register_decoration({
-		deco_type = "simple",
-		place_on = {
-			"default:sand",
-			"everness:mineral_sand",
-		},
-		sidelen = 16,
-		noise_params = {
-			offset = -0,
-			scale = 0.01,
-			spread = {x = 100, y = 100, z = 100},
-			seed = 3789,
-			octaves = 4,
-			persist = 0.8,
-		},
-    place_offset_y=-1,
-    flags = "place_center_x,place_center_z,force_placement",
-		biomes = oceans_and_shore,
-		y_max = 2,
-		y_min = 0,
-		decoration = "marinara:sand_with_seashells_yellow"
-	})
-
-	minetest.register_decoration({
-		deco_type = "simple",
-		place_on = {
-			"default:sand",
-			"everness:mineral_sand",
-		},
-		sidelen = 16,
-		noise_params = {
-			offset = -0,
-			scale = 0.01,
-			spread = {x = 100, y = 100, z = 100},
-			seed = 3789,
-			octaves = 4,
-			persist = 0.8,
-		},
-    place_offset_y=-1,
-    flags = "place_center_x,place_center_z,force_placement",
-		biomes = oceans_and_shore,
-		y_max = 2,
-		y_min = 0,
-		decoration = "marinara:sand_with_seashells_brown"
-	})
-
-	minetest.register_decoration({
-		deco_type = "simple",
-		place_on = {
-			"default:sand",
-			"everness:mineral_sand",
-		},
-		sidelen = 16,
-		noise_params = {
-			offset = -0,
-			scale = 0.01,
-			spread = {x = 100, y = 100, z = 100},
-			seed = 3789,
-			octaves = 4,
-			persist = 0.8,
-		},
-    place_offset_y=-1,
-    flags = "place_center_x,place_center_z,force_placement",
-		biomes = oceans_and_shore,
-		y_max = 2,
-		y_min = 0,
-		decoration = "marinara:sand_with_seashells_pink"
-	})
-
-	minetest.register_decoration({
-		deco_type = "simple",
-		place_on = {
-			"default:sand",
-			"everness:mineral_sand",
-		},
-		sidelen = 16,
-		noise_params = {
-			offset = -0,
-			scale = 0.01,
-			spread = {x = 100, y = 100, z = 100},
-			seed = 3789,
-			octaves = 4,
-			persist = 0.8,
-		},
-    place_offset_y=-1,
-    flags = "place_center_x,place_center_z,force_placement",
-		biomes = oceans_and_shore,
-		y_max = 2,
-		y_min = 0,
-		decoration = "marinara:sand_with_seashells_orange"
-	})
-
 
 --- wrecks
 
