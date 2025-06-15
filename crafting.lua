@@ -1,15 +1,5 @@
 local S = minetest.get_translator("marinara")
 
-  stairs.register_stair_and_slab(
-      "marinara_reed_node",
-      "marinara:reed_bundle",
-      {snappy = 3, oddly_breakable_by_hand = 0, flammable = 0},
-      {"marinara_reed_node_top.png", "marinara_reed_node.png", "marinara_reed_node_top.png"},
-      S("Reed Node Stair"),
-      S("Reed Node Slab"),
-      default.node_sound_leaves_defaults()
-    )
-
 minetest.register_node("marinara:reed_bundle", {
 	description = S("Reed Node"),
 	tiles = {
@@ -21,6 +11,16 @@ minetest.register_node("marinara:reed_bundle", {
 	groups = {snappy = 3, flammable = 2},
 	sounds = default.node_sound_leaves_defaults(),
 })
+
+  stairs.register_stair_and_slab(
+      "marinara_reed_node",
+      "marinara:reed_bundle",
+      {snappy = 3, oddly_breakable_by_hand = 0, flammable = 0},
+      {"marinara_reed_node_top.png", "marinara_reed_node.png", "marinara_reed_node_top.png"},
+      S("Reed Node Stair"),
+      S("Reed Node Slab"),
+      default.node_sound_leaves_defaults()
+    )
 
 minetest.register_craft({
 	output = "marinara:reed_bundle",
